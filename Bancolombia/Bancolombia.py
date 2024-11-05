@@ -20,8 +20,11 @@ base_dir = os.path.dirname(__file__) # archivos .py
 # Define el directorio de insumos
 directorio = os.path.join(base_dir, 'insumos')
 
+# Corte
+corte = 'sep24' # Actualizar
+
 # Nombre del archivo de datos
-data_file = 'Bancolombia_FECHAS_sep24.parquet'
+data_file = f'Bancolombia_FECHAS_{corte}.parquet'
 
 # Lee el archivo parquet desde el directorio de insumos
 bancolombia_fechas_join = pd.read_parquet(os.path.join(directorio, data_file))
